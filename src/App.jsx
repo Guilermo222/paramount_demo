@@ -1,4 +1,5 @@
 import { useGateValue } from '@statsig/react-bindings';
+import QRCode from 'react-qr-code';
 
 const navItems = ['Shows', 'Movies', 'Live TV', 'Sports', 'News', 'Brands'];
 const heroCharacters = ['HALO', '1883', 'FRAZIER', 'SURVIVOR', 'STAR TREK', 'YELLOWJACKETS'];
@@ -52,6 +53,7 @@ function getBackgroundOverride() {
 
 function App() {
   const gatePurpleEnabled = useGateValue('background');
+  const showQrCode = useGateValue('paramount_qrcode');
   const overridePurpleEnabled = getBackgroundOverride();
   const purpleEnabled = overridePurpleEnabled ?? gatePurpleEnabled;
   const gateLabel = gatePurpleEnabled ? 'PURPLE VARIANT' : 'BLUE VARIANT';
@@ -127,6 +129,38 @@ function App() {
             </div>
           </div>
         </section>
+
+        {showQrCode && (
+          <section className="qr-gate-panel">
+            <div className="qr-copy">
+              <p className="eyebrow">MOBILE QUICK ACCESS</p>
+              <h3>Scan to open this Paramount demo on your phone.</h3>
+              <p>
+                This QR section is controlled by the Statsig gate `paramount_qrcode`. Turn the gate ON to show it and OFF to hide it.
+              </p>
+              <a
+                className="qr-link"
+                href="https://guilermo222.github.io/paramount_demo/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://guilermo222.github.io/paramount_demo/
+              </a>
+            </div>
+
+            <div className="qr-card" aria-label="QR code linking to the Paramount demo">
+              <div className="qr-frame">
+                <QRCode
+                  value="https://guilermo222.github.io/paramount_demo/"
+                  size={168}
+                  bgColor="#FFFFFF"
+                  fgColor="#0B0F18"
+                />
+              </div>
+              <span className="qr-caption">Open on mobile</span>
+            </div>
+          </section>
+        )}
 
         <section className="plans-panel">
           <div className="plans-copy">
