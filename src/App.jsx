@@ -135,17 +135,6 @@ function App() {
             <div className="qr-copy">
               <p className="eyebrow">MOBILE QUICK ACCESS</p>
               <h3>Scan to open this Paramount demo on your phone.</h3>
-              <p>
-                This QR section is controlled by the Statsig gate `paramount_qrcode`. Turn the gate ON to show it and OFF to hide it.
-              </p>
-              <a
-                className="qr-link"
-                href="https://guilermo222.github.io/paramount_demo/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://guilermo222.github.io/paramount_demo/
-              </a>
             </div>
 
             <div className="qr-card" aria-label="QR code linking to the Paramount demo">
