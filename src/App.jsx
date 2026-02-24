@@ -165,7 +165,6 @@ function App() {
                     decoding="async"
                   />
                   <div className="poster-shine" />
-                  <span>{name}</span>
                 </div>
               ))}
             </div>
@@ -257,10 +256,6 @@ function App() {
                       decoding="async"
                     />
                     <div className="poster-shine" />
-                    <div className="poster-footer">
-                      <small>{row.title}</small>
-                      <span>{item}</span>
-                    </div>
                   </div>
                     );
                   })()}
