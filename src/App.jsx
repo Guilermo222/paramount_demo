@@ -7,7 +7,7 @@ const heroCharacters = ['HALO', '1883', 'FRAZIER', 'SURVIVOR', 'STAR TREK', 'YEL
 const rails = [
   {
     title: 'Featured',
-    items: ['Landman', 'Dexter', 'SEAL Team', 'The Challenge', 'Tulsa King', 'NCIS'],
+    items: ['Landman', 'Mayor of Kingstown', 'Tulsa King', 'NCIS: Tony & Ziva', 'Mobland', '1923'],
   },
   {
     title: 'Drama & Originals',
@@ -29,6 +29,21 @@ const planCards = [
   { name: 'Essential', price: '$5.99/mo', badge: 'Streaming', copy: 'Hit shows, movies and live NFL on CBS' },
   { name: 'With SHOWTIME', price: '$11.99/mo', badge: 'Premium', copy: 'Ad-free on-demand, downloads and SHOWTIME' },
 ];
+
+const posterImageByTitle = {
+  Landman:
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/12/72/15/36f4f3b4-fae5-4bf3-9eee-51dbb6ea08e6.jpg?format=webp',
+  'Mayor of Kingstown':
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/57/93/81/a3db70f8-2aa6-4b32-a684-9eec3bd5ee42.jpg?format=webp',
+  'Tulsa King':
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/57/94/16/9d4b26ad-dfc8-4e3b-97ab-c19ba314f9a2.jpg?format=webp',
+  'NCIS: Tony & Ziva':
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/51/87/27/93b9141b-3118-476c-8870-dfd6f9590367.jpg?format=webp',
+  Mobland:
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/51/86/64/7f972135-8298-43f7-8d27-0afce371c728.jpg?format=webp',
+  '1923':
+    'https://wwwimage-us.pplusstatic.com/thumbnails/photos/w700-q80/cbs_page_attribute/57/95/03/ebc63032-bd6b-4daa-a522-9290648e0698.jpg?format=webp',
+};
 
 function getBackgroundOverride() {
   if (typeof window === 'undefined') {
@@ -190,7 +205,20 @@ function App() {
             <div className="card-scroller">
               {row.items.map((item, index) => (
                 <article key={item} className="poster-card">
-                  <div className={`poster-art row-${rowIndex + 1} item-${(index % 6) + 1}`}>
+                  <div
+                    className={`poster-art row-${rowIndex + 1} item-${(index % 6) + 1} ${
+                      posterImageByTitle[item] ? 'has-poster-image' : ''
+                    }`}
+                  >
+                    {posterImageByTitle[item] ? (
+                      <img
+                        className="poster-image"
+                        src={posterImageByTitle[item]}
+                        alt={item}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    ) : null}
                     <div className="poster-shine" />
                     <div className="poster-footer">
                       <small>{row.title}</small>
