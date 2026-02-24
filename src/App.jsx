@@ -196,7 +196,7 @@ function App() {
         <section className="plans-panel">
           <div className="plans-copy">
             <p className="eyebrow">PLANS STARTING AT</p>
-            <h2>$5.99/mo</h2>
+            <h2>$8.99/mo</h2>
             <p>Cancel anytime. Offer structure and pricing here are display-only for the UI clone.</p>
           </div>
 
