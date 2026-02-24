@@ -108,12 +108,6 @@ function App() {
               <button className="solid-btn large">Try It Free</button>
               <button className="ghost-btn large">Choose Plan</button>
             </div>
-
-            <div className="hero-meta">
-              <span className="gate-pill">Gate `background`: {gateLabel}</span>
-              <span className="disclaimer-pill">Active theme: {sourceLabel}</span>
-              <span className="disclaimer-pill">Clone UI demo only</span>
-            </div>
           </div>
 
           <div className="billboard-right">
