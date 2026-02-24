@@ -406,7 +406,7 @@ main {
   grid-template-columns: 1.2fr auto;
   gap: 1rem;
   align-items: center;
-  padding: 1rem 1.05rem;
+  padding: 0.9rem 1.05rem;
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background:
@@ -415,11 +415,18 @@ main {
   backdrop-filter: blur(12px);
 }
 
+.qr-copy {
+  display: grid;
+  align-content: center;
+  gap: 0.65rem;
+}
+
 .qr-copy h3 {
-  margin: 0.12rem 0 0.45rem;
+  margin: 0.12rem 0 0;
   font-size: 1.3rem;
   line-height: 1.05;
   letter-spacing: -0.03em;
+  max-width: 22ch;
 }
 
 .qr-copy p {
@@ -439,6 +446,38 @@ main {
 
 .qr-link:hover {
   text-decoration: underline;
+}
+
+.qr-visual-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.qr-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.chip-1 {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-2) 28%, transparent), rgba(255, 255, 255, 0.03));
+}
+
+.chip-2 {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 24%, transparent), rgba(255, 255, 255, 0.03));
+}
+
+.chip-3 {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-3) 16%, transparent), rgba(255, 255, 255, 0.03));
 }
 
 .qr-card {
@@ -717,6 +756,7 @@ main {
   .qr-gate-panel {
     grid-template-columns: 1fr;
     justify-items: start;
+    align-items: start;
   }
 }
 
