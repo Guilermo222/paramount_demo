@@ -26,8 +26,8 @@ const rails = [
 const brands = ['CBS', 'SHOWTIME', 'Nickelodeon', 'MTV', 'Comedy Central', 'BET'];
 
 const planCards = [
-  { name: 'Essential', price: '$5.99/mo', badge: 'Streaming', copy: 'Hit shows, movies and live NFL on CBS' },
-  { name: 'With SHOWTIME', price: '$11.99/mo', badge: 'Premium', copy: 'Ad-free on-demand, downloads and SHOWTIME' },
+  { name: 'Essential', price: '$8.99/month', badge: 'Streaming', copy: 'Hit shows, movies and live NFL on CBS' },
+  { name: 'With SHOWTIME', price: '$13.99/month', badge: 'Premium', copy: 'Ad-free on-demand, downloads and SHOWTIME' },
 ];
 
 const baseUrl = import.meta.env.BASE_URL;
