@@ -369,6 +369,38 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.mosaic-tile::before {
+  content: '';
+  position: absolute;
+  inset: 10% 12% 28% 12%;
+  border-radius: 0.65rem;
+  background:
+    radial-gradient(circle at 28% 26%, rgba(255, 255, 255, 0.2), transparent 40%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 58%),
+    repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.08) 0 2px,
+      transparent 2px 10px
+    );
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.mosaic-tile::after {
+  content: '';
+  position: absolute;
+  width: 72%;
+  height: 36%;
+  left: 14%;
+  top: 14%;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.24), transparent 70%);
+  filter: blur(12px);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
 .mosaic-tile span {
   position: relative;
   z-index: 1;
@@ -446,38 +478,6 @@ main {
 
 .qr-link:hover {
   text-decoration: underline;
-}
-
-.qr-visual-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.qr-chip {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2rem;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  color: rgba(255, 255, 255, 0.95);
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.chip-1 {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-2) 28%, transparent), rgba(255, 255, 255, 0.03));
-}
-
-.chip-2 {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 24%, transparent), rgba(255, 255, 255, 0.03));
-}
-
-.chip-3 {
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent-3) 16%, transparent), rgba(255, 255, 255, 0.03));
 }
 
 .qr-card {

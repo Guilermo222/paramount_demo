@@ -135,11 +135,6 @@ function App() {
             <div className="qr-copy">
               <p className="eyebrow">MOBILE QUICK ACCESS</p>
               <h3>Scan to open this Paramount demo on your phone.</h3>
-              <div className="qr-visual-strip" aria-hidden="true">
-                <div className="qr-chip chip-1">iPhone</div>
-                <div className="qr-chip chip-2">Statsig Gate</div>
-                <div className="qr-chip chip-3">Paramount Demo</div>
-              </div>
             </div>
 
             <div className="qr-card" aria-label="QR code linking to the Paramount demo">
